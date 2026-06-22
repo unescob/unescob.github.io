@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="6" y="6" width="36" height="36" rx="4" stroke="hsl(45,100%,72%)" stroke-width="2"/>
+  <!-- central chip -->
+  <rect x="19" y="19" width="10" height="10" rx="1.5" stroke="hsl(45,100%,72%)" stroke-width="2"/>
+  <!-- traces -->
+  <path d="M24 19V12M24 29v7M19 24h-7M29 24h7" stroke="hsl(45,100%,72%)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M19 21h-5M19 27h-5M29 21h5M29 27h5" stroke="hsl(45,100%,72%)" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+  <!-- pads -->
+  <circle cx="12" cy="12" r="2" stroke="hsl(45,100%,72%)" stroke-width="2"/>
+  <circle cx="36" cy="36" r="2" stroke="hsl(45,100%,72%)" stroke-width="2"/>
+  <circle cx="12" cy="36" r="1.5" fill="hsl(45,100%,72%)"/>
+  <circle cx="36" cy="12" r="1.5" fill="hsl(45,100%,72%)"/>
+</svg>
