@@ -336,6 +336,27 @@
     .coursework-tags {
       margin-top: 14px;
     }
+
+    .experience-details {
+      margin: 12px 0 18px;
+      padding-left: 20px;
+    }
+
+    .experience-details li {
+      list-style: disc;
+      margin-bottom: 9px;
+    }
+
+    .experience-details li::marker {
+      color: var(--orange-yellow-crayola);
+    }
+
+    .experience-video { margin-left: 0; }
+
+    .timeline-list .project-video-label {
+      color: var(--white-2);
+      line-height: 1.5;
+    }
   </style>
 
 </head>
@@ -614,6 +635,52 @@
                       <li>Laid out and populated the BME688 sensor PCB with its supporting power, filtering, and I2C interface circuitry.</li>
                       <li>Defined a compact 24-byte packet format and a ten-minute sample-and-transmit cycle.</li>
                     </ul>
+                  </div>
+                </template>
+              </li>
+
+              <!-- Autonomous Olympic Curling Robot -->
+              <li class="project-item active" data-project
+                data-title="Autonomous Olympic Curling Robot"
+                data-category=""
+                data-img="./assets/images/curling-robot.jpg"
+                data-hide-modal-image="true"
+                data-tech=""
+                data-links='[{"label":"Watch Demo on YouTube","url":"https://youtube.com/shorts/1_l2J48PvzQ"}]'>
+                <button class="project-trigger" data-project-trigger>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/curling-robot.jpg"
+                      alt="Autonomous Olympic curling robot demonstration" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Autonomous Olympic Curling Robot</h3>
+                </button>
+                <template data-project-detail>
+                  <div class="project-detail">
+                    <h5>ME210 Final Project</h5>
+                    <p>
+                      Our team built an autonomous curling robot that could start in any orientation,
+                      use wall contact and motor-current feedback to determine its orientation,
+                      navigate to a designated drop point, and dispense metal pucks toward the center of the target.
+                    </p>
+                    <h5>My contribution</h5>
+                    <ul>
+                      <li>Implemented non-blocking timer logic so timed actions could run without stalling the rest of the code.</li>
+                      <li>Wrote reusable Arduino commands for forward motion, reverse motion, and rotation that the robot's navigation code could call.</li>
+                    </ul>
+                    <a class="project-video-link landscape"
+                      href="https://youtube.com/shorts/1_l2J48PvzQ"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="Watch the autonomous Olympic curling robot demonstration on YouTube">
+                      <img src="./assets/images/curling-robot.jpg"
+                        alt="Curling robot demonstration video" loading="lazy">
+                      <span class="project-video-label">
+                        <ion-icon name="play-circle-outline"></ion-icon>
+                        Watch the curling robot demo on YouTube
+                      </span>
+                    </a>
                   </div>
                 </template>
               </li>
@@ -905,13 +972,8 @@
             </div>
             <ol class="timeline-list">
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Controls Software Engineer Intern — Endiatx</h4>
-                <span>Summer 2026</span>
-                <p class="timeline-text">
-                  Controls software engineer intern at a medical-robotics startup developing a swallowable pill-robot. 
-                  Working within a regulated, IP-sensitive environment on the controls software and simulation tools used to diagnose and 
-                  refine the robot's in-body movement.
-                </p>
+                <h4 class="h4 timeline-item-title">Controls Software Engineering Intern &mdash; Endiatx</h4>
+                <span>June &ndash; August 2026 &middot; Hayward, CA</span>
               </li>
             </ol>
           </section>
