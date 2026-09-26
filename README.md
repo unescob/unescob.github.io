@@ -42,3 +42,29 @@ If you want to contact me you can reach me at [Twitter](https://www.x.com/codewi
 ## License
 
 MIT
+
+
+## Sharing individual descriptions
+
+Every project has a **Direct link** beside its card. Opening a project also updates
+ the address bar; **Copy link** inside the description copies that URL. The Endiatx
+ experience has the same direct-link and copy controls. Links open the full
+ description immediately, including after refresh. Back/Forward and Escape work
+ with the descriptions.
+
+After uploading this version to the existing GitHub Pages repository, use:
+
+| Description | Direct URL |
+| --- | --- |
+| LoRa Environmental Monitoring Node | https://unescob.github.io/#project-lora-environmental-monitor |
+| Autonomous Olympic Curling Robot | https://unescob.github.io/#project-curling-robot |
+| Custom Apple IIe-Style Computer | https://unescob.github.io/#project-apple-iie-computer |
+| Beat Saber | https://unescob.github.io/#project-beat-saber |
+| FPGA Music Player & Waveform Display | https://unescob.github.io/#project-fpga-music-player |
+| Fingerprint-Authenticated Door Opener | https://unescob.github.io/#project-fingerprint-door-opener |
+| Endiatx work experience | https://unescob.github.io/#experience-endiatx |
+
+Only `index.html`, `assets/js/script.js`, and `assets/css/style.css` need to be
+replaced to enable this feature. This README documents the links. No build step,
+server configuration, or new dependency is required. Keep the `data-detail-id`
+values stable so previously shared URLs continue to work.

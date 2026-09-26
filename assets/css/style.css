@@ -1975,3 +1975,40 @@ article.section {
 }
 
 .project-modal-link:hover { color: var(--white-1); }
+
+/* Shareable project and experience descriptions. */
+.detail-permalink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  min-height: 44px;
+  margin-left: 10px;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+}
+
+.detail-permalink:hover { text-decoration: underline; }
+.experience-permalink { margin-left: 0; }
+.detail-permalink:focus-visible,
+.project-modal-link:focus-visible,
+.modal-close-btn:focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 3px;
+}
+
+.project-modal .modal-title { padding-right: 40px; }
+.detail-share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 14px 0 22px; }
+.detail-share button { min-height: 44px; }
+.detail-copy-status { color: var(--light-gray); font-size: var(--fs-7); }
+.detail-link-fallback {
+  width: 100%;
+  padding: 10px;
+  color: var(--white-2);
+  background: var(--onyx);
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  font: inherit;
+  font-size: var(--fs-7);
+}
+.detail-link-fallback[hidden] { display: none; }

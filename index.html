@@ -236,13 +236,14 @@
 
     .project-item.active {
       display: flex;
+      flex-direction: column;
     }
 
     .project-item .project-trigger {
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 100%;
+      flex: 1;
     }
 
     /* Consistent thumbnail height across every tile. */
@@ -548,13 +549,14 @@
           <section class="projects">
 
             <p class="projects-intro">
-              An overview of what I've built. Click any project to expand the full details.
+              An overview of what I've built. Click any project to expand the full details, or use its direct link to share it.
             </p>
 
             <ul class="project-list" data-project-list>
 
               <!-- Project 1 -->
               <li class="project-item active" data-project
+                data-detail-id="project-lora-environmental-monitor"
                 data-title="LoRa Environmental Monitoring Node"
                 data-category="Embedded &middot; Hardware"
                 data-img="./assets/images/project-1.jpg"
@@ -571,6 +573,7 @@
                   <h3 class="project-title">LoRa Environmental Monitoring Node</h3>
                   <p class="project-category">Embedded &middot; Hardware</p>
                 </button>
+                <a class="detail-permalink" href="#project-lora-environmental-monitor" data-detail-link aria-label="Direct link to LoRa Environmental Monitoring Node"><span aria-hidden="true">↗</span> Direct link</a>
                 <template data-project-detail>
                   <div class="project-detail">
                     <p>
@@ -641,6 +644,7 @@
 
               <!-- Autonomous Olympic Curling Robot -->
               <li class="project-item active" data-project
+                data-detail-id="project-curling-robot"
                 data-title="Autonomous Olympic Curling Robot"
                 data-category="Mechatronics &middot; Robotics"
                 data-img="./assets/images/curling-robot.jpg"
@@ -658,6 +662,7 @@
                   <h3 class="project-title">Autonomous Olympic Curling Robot</h3>
                   <p class="project-category">Mechatronics &middot; Robotics</p>
                 </button>
+                <a class="detail-permalink" href="#project-curling-robot" data-detail-link aria-label="Direct link to Autonomous Olympic Curling Robot"><span aria-hidden="true">↗</span> Direct link</a>
                 <template data-project-detail>
                   <div class="project-detail">
                     <h5>ME210 Final Project</h5>
@@ -688,6 +693,7 @@
 
               <!-- Project 2 -->
               <li class="project-item active" data-project
+                data-detail-id="project-apple-iie-computer"
                 data-title="Custom Apple IIe-Style Computer"
                 data-category="Embedded Systems &middot; Bare-Metal Software"
                 data-img="./assets/images/project-2.png"
@@ -704,6 +710,7 @@
                   <h3 class="project-title">Custom Apple IIe-Style Computer</h3>
                   <p class="project-category">Embedded Systems &middot; Bare-Metal Software</p>
                 </button>
+                <a class="detail-permalink" href="#project-apple-iie-computer" data-detail-link aria-label="Direct link to Custom Apple IIe-Style Computer"><span aria-hidden="true">↗</span> Direct link</a>
 
                 <template data-project-detail>
                   <div class="project-detail">
@@ -748,6 +755,7 @@
 
               <!-- Project 3 -->
               <li class="project-item active" data-project
+                data-detail-id="project-beat-saber"
                 data-title="Beat Saber"
                 data-category="Embedded Systems &middot; Systems Integration"
                 data-img="./assets/images/Beatsaber_Thumbnail.png"
@@ -765,6 +773,7 @@
                   <h3 class="project-title">Beat Saber</h3>
                   <p class="project-category">Embedded Systems &middot; Systems Integration</p>
                 </button>
+                <a class="detail-permalink" href="#project-beat-saber" data-detail-link aria-label="Direct link to Beat Saber"><span aria-hidden="true">↗</span> Direct link</a>
 
                 <template data-project-detail>
                   <div class="project-detail">
@@ -807,6 +816,7 @@
 
               <!-- Project 4 -->
               <li class="project-item active" data-project
+                data-detail-id="project-fpga-music-player"
                 data-title="FPGA Music Player &amp; Waveform Display"
                 data-category="Digital Design &middot; FPGA &middot; Formal Verification"
                 data-img="./assets/images/fpga-music-player.jpg"
@@ -825,6 +835,7 @@
                   <h3 class="project-title">FPGA Music Player &amp; Waveform Display</h3>
                   <p class="project-category">Digital Design &middot; FPGA</p>
                 </button>
+                <a class="detail-permalink" href="#project-fpga-music-player" data-detail-link aria-label="Direct link to FPGA Music Player &amp; Waveform Display"><span aria-hidden="true">↗</span> Direct link</a>
 
                 <template data-project-detail>
                   <div class="project-detail">
@@ -867,6 +878,7 @@
 
               <!-- Project 5 -->
               <li class="project-item active" data-project
+                data-detail-id="project-fingerprint-door-opener"
                 data-title="Fingerprint-Authenticated Door Opener"
                 data-category="Embedded Systems &middot; Prototyping"
                 data-img="./assets/images/fingerprint-door-opener.jpg"
@@ -885,6 +897,7 @@
                   <h3 class="project-title">Fingerprint-Authenticated Door Opener</h3>
                   <p class="project-category">Embedded Systems &middot; Prototyping</p>
                 </button>
+                <a class="detail-permalink" href="#project-fingerprint-door-opener" data-detail-link aria-label="Direct link to Fingerprint-Authenticated Door Opener"><span aria-hidden="true">↗</span> Direct link</a>
 
                 <template data-project-detail>
                   <div class="project-detail">
@@ -972,9 +985,11 @@
               <h3 class="h3">Experience</h3>
             </div>
             <ol class="timeline-list">
-              <li class="timeline-item">
+              <li class="timeline-item" data-experience data-detail-id="experience-endiatx" data-title="Controls Software Engineering Intern — Endiatx" data-category="June – August 2026 · Hayward, CA" data-hide-modal-image="true">
     <h4 class="h4 timeline-item-title">Controls Software Engineering Intern &mdash; Endiatx</h4>
+    <a class="detail-permalink experience-permalink" href="#experience-endiatx" data-detail-link aria-label="Direct link to Endiatx work experience"><span aria-hidden="true">↗</span> Direct link</a>
     <span class="experience-date">June &ndash; August 2026 &middot; Hayward, CA</span>
+    <div class="project-detail" data-experience-detail>
     <p class="timeline-text">Worked on embedded firmware, calibration, and hardware debugging for PillBot, a swallowable robotic pill.</p>
     <ul class="timeline-text experience-details">
                   <li>Integrated controls and calibration algorithms into embedded firmware for PillBot, working across hardware, firmware, and the user interface.</li>
@@ -986,6 +1001,7 @@
       <img src="./assets/images/pillbot-demo.jpg" alt="Public PillBot demonstration video">
       <span class="project-video-label"><ion-icon name="play-circle-outline"></ion-icon>Watch the public PillBot demo &middot; 3:58</span>
     </a>
+    </div>
               </li>
             </ol>
           </section>
@@ -1047,9 +1063,9 @@
       <!-- #PROJECT MODAL (reuses the template's modal styling) -->
       <div class="modal-container" data-modal-container>
         <div class="overlay" data-overlay></div>
-        <section class="testimonials-modal project-modal">
+        <section class="testimonials-modal project-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1">
 
-          <button class="modal-close-btn" data-modal-close-btn>
+          <button class="modal-close-btn" data-modal-close-btn aria-label="Close description">
             <ion-icon name="close-outline"></ion-icon>
           </button>
 
@@ -1058,9 +1074,14 @@
           </figure>
 
           <div class="modal-content">
-            <h4 class="h3 modal-title" data-modal-title>Project title</h4>
+            <h4 class="h3 modal-title" id="detail-title" data-modal-title>Project title</h4>
             <p class="project-modal-category" data-modal-category></p>
             <p class="project-modal-tech" data-modal-tech></p>
+            <div class="detail-share">
+              <button type="button" class="project-modal-link" data-copy-link>Copy link</button>
+              <span class="detail-copy-status" role="status" data-copy-status></span>
+              <input class="detail-link-fallback" data-link-fallback aria-label="Select and copy this direct link" readonly hidden>
+            </div>
             <div data-modal-text></div>
             <div class="project-modal-links" data-modal-links></div>
           </div>
@@ -1076,18 +1097,6 @@
   <!-- custom js link -->
   <script src="./assets/js/script.js"></script>
 
-  <script>
-    // Project thumbnails remain visible in the grid, while expanded
-    // project views omit the banner image for a cleaner, scrollable layout.
-    const projectModal = document.querySelector(".project-modal");
-    document.querySelectorAll("[data-project-trigger]").forEach(function (trigger) {
-      trigger.addEventListener("click", function () {
-        const project = trigger.closest("[data-project]");
-        const hideBanner = project && project.dataset.hideModalImage === "true";
-        if (projectModal) projectModal.classList.toggle("no-banner", hideBanner);
-      });
-    });
-  </script>
 
   <!-- ionicon link -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
