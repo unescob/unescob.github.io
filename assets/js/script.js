@@ -44,9 +44,6 @@ const modalContainer = document.querySelector('[data-modal-container]');
 const dialog = modalContainer.querySelector('[role="dialog"]');
 const closeButton = document.querySelector('[data-modal-close-btn]');
 const overlay = document.querySelector('[data-overlay]');
-const copyButton = document.querySelector('[data-copy-link]');
-const copyStatus = document.querySelector('[data-copy-status]');
-const linkFallback = document.querySelector('[data-link-fallback]');
 const background = document.querySelectorAll('.page-scroll, .navbar, [data-sidebar]');
 const defaultTitle = document.title;
 let activeItem = null;
@@ -68,7 +65,7 @@ function showDetail(item) {
   if (activeItem === item) return;
   if (!activeItem) {
     returnFocus = document.activeElement === document.body
-      ? item.querySelector('[data-detail-link]') : document.activeElement;
+      ? item.querySelector('[data-project-trigger], [data-experience-trigger]') : document.activeElement;
     previousOverflow = document.body.style.overflow;
   }
   activeItem = item;
@@ -97,8 +94,6 @@ function showDetail(item) {
     anchor.rel = 'noopener noreferrer';
     linksContainer.appendChild(anchor);
   });
-  copyStatus.textContent = '';
-  linkFallback.hidden = true;
   modalContainer.classList.add('active');
   overlay.classList.add('active');
   background.forEach(element => { element.inert = true; });
@@ -138,33 +133,14 @@ function closeDetail() {
 }
 
 detailItems.forEach(item => {
-  const trigger = item.querySelector('[data-project-trigger]');
-  if (trigger) trigger.addEventListener('click', () => openDetail(item));
-  item.querySelector('[data-detail-link]').addEventListener('click', event => {
-    // Preserve the browser's normal modified-click / open-in-new-tab behavior.
+  const trigger = item.querySelector('[data-project-trigger], [data-experience-trigger]');
+  if (!trigger) return;
+  trigger.addEventListener('click', event => {
+    // Preserve normal open-in-new-tab behavior for the experience title link.
     if (event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     openDetail(item);
   });
-});
-
-copyButton.addEventListener('click', async () => {
-  const item = activeItem;
-  if (!item) return;
-  const url = new URL(window.location.href);
-  url.hash = item.dataset.detailId;
-  try {
-    await navigator.clipboard.writeText(url.href);
-    if (activeItem === item) copyStatus.textContent = 'Link copied!';
-  } catch (_) {
-    // Clipboard access can be denied or unavailable when previewing local files.
-    if (activeItem !== item) return;
-    copyStatus.textContent = 'Select and copy the link below.';
-    linkFallback.hidden = false;
-    linkFallback.value = url.href;
-    linkFallback.focus();
-    linkFallback.select();
-  }
 });
 
 closeButton.addEventListener('click', closeDetail);

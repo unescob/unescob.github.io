@@ -46,11 +46,10 @@ MIT
 
 ## Sharing individual descriptions
 
-Every project has a **Direct link** beside its card. Opening a project also updates
- the address bar; **Copy link** inside the description copies that URL. The Endiatx
- experience has the same direct-link and copy controls. Links open the full
- description immediately, including after refresh. Back/Forward and Escape work
- with the descriptions.
+Opening a project updates the address bar. Copy that URL to share the full
+ description directly. Click the Endiatx experience title to open its description
+ and get its URL in the same way. Shared links open immediately, including after
+ refresh. Back/Forward and Escape work with the descriptions.
 
 After uploading this version to the existing GitHub Pages repository, use:
 
